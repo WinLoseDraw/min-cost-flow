@@ -9,7 +9,6 @@ from implementation.min_ratio_cycles import find_min_ratio_cycle
 # using an implementation similar to the static method as mentioned in the paper
 def min_cost_flow_with_optimal_cost(I_original: MinCostFlow,
                                     optimal_cost: int):
-    I_original.optimal_flow_cost = optimal_cost
     print("Initial instance: ")
     I_original.display_instance()
     last_idx = I_original.m
