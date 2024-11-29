@@ -41,8 +41,8 @@ def min_cost_flow_with_optimal_cost(I_original: MinCostFlow,
 # Guesses the optimal flow cost using binary search and solves the min cost flow problem instance
 def find_min_cost_flow(
         I: MinCostFlow):
-    min_possible_cost = sum(I.upper_capacities[idx] * min(0, I.costs[idx]) for idx in range(I.m))
-    max_possible_cost = sum(I.upper_capacities[idx] * max(0, I.costs[idx]) for idx in range(I.m))
+    min_possible_cost = - I.C * I.U
+    max_possible_cost = I.C * I.U
     found_cost = None
     found_flow = None
     l = min_possible_cost
